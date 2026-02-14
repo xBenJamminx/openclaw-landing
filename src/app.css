@@ -1,12 +1,48 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #111827;
+  --color-bg: #fbfcfd;
+  --color-bg-alt: #f4f5f7;
+  --color-surface: #ffffff;
   --color-accent: #0d9488;
-  --color-accent-light: #14b8a6;
-  --color-surface: #f9fafb;
-  --color-surface-alt: #f3f4f6;
-  --color-gold: #b45309;
-  --color-gold-light: #d97706;
+  --color-accent-dark: #0f766e;
+  --color-accent-light: #ccfbf1;
+  --color-text-primary: #111827;
+  --color-text-secondary: #374151;
+  --color-text-tertiary: #6b7280;
+  --color-text-quaternary: #9ca3af;
+  --color-border: #e5e7eb;
+  --color-border-light: #f3f4f6;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fbfcfd;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dot grid pattern */
+.dot-grid {
+  background-image: radial-gradient(circle, #d1d5db 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Gradient border trick */
+.gradient-border {
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #0d9488, #14b8a6, #5eead4) border-box;
+  border: 2px solid transparent;
+}
+
+/* Frosted surface */
+.frosted {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
